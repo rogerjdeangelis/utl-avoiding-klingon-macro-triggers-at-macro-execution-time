@@ -20,8 +20,23 @@ You need this macro
                                                                                                                                  
 %macro dosubl(arg);                                                                                                              
   %let rc=%qsysfunc(dosubl(&arg));                                                                                               
-%mend dosubl;                                                                                                                    
-                                                                                                                                 
+%mend dosubl;    
+
+Recent simplification by Bart
+
+Nice Simlification                              
+                                                
+%symdel s / nowarn;                             
+                                                
+%let a=A,B,C;                                   
+                                                
+%let s=%sysfunc(transtrn("&a",%str(,)," "));    
+                                                
+%put &=s;                                       
+                                                
+Bartosz Jablonski                               
+yabwon@gmail.com                                
+                                                                                                                                                                                
 *_                   _                                                                                                           
 (_)_ __  _ __  _   _| |_                                                                                                         
 | | '_ \| '_ \| | | | __|                                                                                                        
