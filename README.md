@@ -17,7 +17,21 @@ Avoiding klingon macro triggers at macro execution time
                                                                                                                                    
        a. Klingon solution                                                                                                         
        b. dosubl solution                                                                                                          
-                                                                                                                                   
+      
+   Nice recent imlification  by Bart                            
+                                                
+      %symdel s / nowarn;                             
+                                                
+      %let a=A,B,C;                                   
+                                                
+      %let s=%sysfunc(transtrn("&a",%str(,)," "));    
+                                                
+      %put &=s;                                       
+                                                
+      Bartosz Jablonski                               
+      yabwon@gmail.com                                
+                                                
+                                                                                                                             
     You need this macro                                                                                                            
                                                                                                                                    
     %macro dosubl(arg);                                                                                                            
