@@ -18,7 +18,7 @@ Avoiding klingon macro triggers at macro execution time
        a. Klingon solution                                                                                                         
        b. dosubl solution                                                                                                          
       
-   Nice recent imlification  by Bart                            
+       Nice recent imlification  by Bart                            
                                                 
       %symdel s / nowarn;                             
                                                 
